@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import * as routes from '../constants/routes';
 
@@ -7,26 +7,26 @@ const Navigation = () =>
   <div>
     <ul>
       <li>
-        <Link to={routes.People}>
+        <NavLink to={routes.People}>
           People
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link to={routes.Planets}>
+        <NavLink to={routes.Planets}>
           Planets
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link to={routes.Vehicles}>
+        <NavLink to={routes.Vehicles}>
           Vehicles
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link to={routes.Favorites}>
+        <NavLink to={routes.Favorites}>
           Favorites
           <span className="favorites-num">
           </span>
-        </Link>
+        </NavLink>
       </li>
     </ul>
   </div>;

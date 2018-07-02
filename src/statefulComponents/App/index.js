@@ -10,33 +10,13 @@ import Navigation from '../../statelessComponents/Navigation/index';
 import People from '../../statelessComponents/People/index';
 import Vehicles from '../../statelessComponents/Vehicles/index';
 import Planets from '../../statelessComponents/Planets/index';
-import * as routes from '../../statelessComponents/constants/routes';
+import Favorites from '../../statelessComponents/Favorites/index';
+import * as routes from '../../helpers/constants/routes';
 
 const App = () =>
-  <Router>
-    <div>
-      <Navigation />
-      <Landing />
-
-      <hr/>
-
-      <Route
-        exact path={routes.Landing}
-        component={() => <Landing />}
-      />
-      <Route
-        exact path={routes.People}
-        component={() => <People />}
-      />
-      <Route
-        exact path={routes.Planets}
-        component={() => <Planets />}
-      />
-      <Route
-        exact path={routes.Vehicles}
-        component={() => <Vehicles />}
-      />
-    </div>
-  </Router>;
+  <div>
+    <Navigation />
+    <Landing /> 
+  </div>;
 
 export default App;
