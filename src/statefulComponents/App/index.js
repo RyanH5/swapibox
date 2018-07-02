@@ -16,6 +16,7 @@ const App = () =>
   <Router>
     <div>
       <Navigation />
+      <Landing />
 
       <hr/>
 
