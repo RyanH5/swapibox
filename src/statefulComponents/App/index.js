@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -13,10 +13,23 @@ import Planets from '../../statelessComponents/Planets/index';
 import Favorites from '../../statelessComponents/Favorites/index';
 import * as routes from '../../helpers/constants/routes';
 
-const App = () =>
-  <div>
-    <Navigation />
-    <Landing /> 
-  </div>;
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <Navigation />
+        <Landing /> 
+        <Route exact path='/' component={Landing} />
+      </div>
+    );
+  }
+}
 
 export default App;
