@@ -4,7 +4,8 @@ import {
   cleanHomeworldData, 
   cleanSpeciesData,
   cleanPlanetData,
-  cleanResidents
+  cleanResidents,
+  cleanVehicles
 } from '../cleaner/index';
 
 // OPENING CRAWL FETCH
@@ -100,5 +101,20 @@ const fetchResidents = async (url) => {
   }
 };
 
+// FETCH VEHICLE DATA
 
-export { fetchFilmCrawl, fetchPeople, fetchSpecies, fetchHomeworld, fetchPlanetData, fetchResidents };
+const fetchVehicles = async (url) => {
+  try {
+    const response = await fetch(url);
+    if (response.status === 200) {
+      const vehicleData = await response.json();
+      const cleanedVehicles = await cleanVehicles(vehicleData.results);
+      return cleanedVehicles;
+    }
+  } catch (error) {
+    throw new Error('failed');
+  }
+};
+
+
+export { fetchFilmCrawl, fetchPeople, fetchSpecies, fetchHomeworld, fetchPlanetData, fetchResidents, fetchVehicles };

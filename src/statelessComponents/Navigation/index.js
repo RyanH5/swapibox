@@ -7,7 +7,7 @@ const Navigation = (props) => {
     <div>
     <button onClick={() => props.fetchByUserSelect()}>People</button>
       <button onClick={() => props.planetFetch()}>Planets</button>
-      <button>Vehicles</button>  
+      <button onClick={() => props.vehicleFetch()}>Vehicles</button>  
       <button>Favorites<span></span></button>  
     </div>
   );
