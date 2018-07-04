@@ -6,7 +6,7 @@ const Navigation = (props) => {
   return (
     <div>
     <button onClick={() => props.fetchByUserSelect()}>People</button>
-      <button>Planets</button>
+      <button onClick={() => props.planetFetch()}>Planets</button>
       <button>Vehicles</button>  
       <button>Favorites<span></span></button>  
     </div>

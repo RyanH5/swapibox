@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import Landing from '../Landing/index';
 import Navigation from '../../statelessComponents/Navigation/index';
-import { fetchPeople } from '../../helpers/fetch/index';
+import { fetchPeople, fetchPlanetData } from '../../helpers/fetch/index';
 // import People from '../../statelessComponents/People/index';
 // import Vehicles from '../../statelessComponents/Vehicles/index';
 // import Planets from '../../statelessComponents/Planets/index';
@@ -33,6 +33,11 @@ class App extends Component {
       .then(people => this.setState({people}));
   }
 
+  planetFetch = () => {
+    const url = 'https://swapi.co/api/planets';
+    fetchPlanetData(url);
+  }
+
   componentDidMount() {
   }
 
@@ -40,7 +45,9 @@ class App extends Component {
     return (
       <div>
         <Navigation 
-          fetchByUserSelect={this.fetchByUserSelect} />
+          fetchByUserSelect={this.fetchByUserSelect} 
+          planetFetch={this.planetFetch} 
+        />
         <Landing /> 
       </div>
     );
