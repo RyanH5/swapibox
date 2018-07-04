@@ -6,8 +6,8 @@ export const cleanFilmCrawl = (filmCrawl) => {
 };
 
 // PEOPLE CLEANERS
-export const cleanPeopleData = (peopleData) => {
-  const allPeople = peopleData.map(async person => {
+export const cleanPeopleData = ({results}) => {
+  const allPeople = results.map(async person => {
     const name = person.name;
     const homeworldData = await fetchHomeworld(person.homeworld);
     const specieData = await fetchSpecies(person.species);
@@ -43,14 +43,14 @@ export const cleanPlanetData = (planets) => {
       let residentName = await fetchResidents(resident);
       return residentName;
     });
-    console.log(eachResident)
-
+    const ans = await Promise.all(eachResident);
+      
     return ({
       name,
       terrain,
       population,
       climate,
-      residents: eachResident
+      residents: ans
     });
   });
   return Promise.all(allPlanets);

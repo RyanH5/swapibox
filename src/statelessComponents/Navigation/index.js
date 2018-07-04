@@ -5,7 +5,7 @@ import * as routes from '../../helpers/constants/routes';
 const Navigation = (props) => {
   return (
     <div>
-    <button onClick={() => props.fetchByUserSelect()}>People</button>
+    <button onClick={() => props.updateCards('people')}>People</button>
       <button onClick={() => props.planetFetch()}>Planets</button>
       <button onClick={() => props.vehicleFetch()}>Vehicles</button>  
       <button>Favorites<span></span></button>  

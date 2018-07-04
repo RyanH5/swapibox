@@ -26,21 +26,24 @@ const fetchFilmCrawl = async () => {
   }
 };
 
-// PEOPLE FETCH FN's
-const fetchPeople = async (url) => {
+// MAIN FETCH
+export const fetchStarWarsData = async (category) => {
   try {
+    const url = `https://swapi.co/api/${category}`;
+    fetch(url);
     const response = await fetch(url);
     if (response.status === 200) {
-      const peopleData = await response.json();
-      const cleanedPeopleData = await cleanPeopleData(peopleData.results);
-      return cleanedPeopleData;
+      const info = await response.json();
+      return info;
     } else {
       throw new Error( response.status );
     }
-  } catch (error) {
+  } catch ( error ) {
     throw new Error('failed');
   }
 };
+
+// PEOPLE FETCH FN's
 
 const fetchHomeworld = async (url) => {
   try {
@@ -80,7 +83,7 @@ const fetchPlanetData = async (url) => {
     if (response.status === 200) {
       const planetData = await response.json();
       const cleanPlanets = await cleanPlanetData(planetData);
-      console.log(cleanPlanets)
+      console.log('full planets', cleanPlanets)
       return cleanPlanets;
     }
   } catch (error) {
@@ -117,4 +120,4 @@ const fetchVehicles = async (url) => {
 };
 
 
-export { fetchFilmCrawl, fetchPeople, fetchSpecies, fetchHomeworld, fetchPlanetData, fetchResidents, fetchVehicles };
+export { fetchFilmCrawl, fetchSpecies, fetchHomeworld, fetchPlanetData, fetchResidents, fetchVehicles };

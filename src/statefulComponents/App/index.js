@@ -7,7 +7,9 @@ import {
 } from 'react-router-dom';
 import Landing from '../Landing/index';
 import Navigation from '../../statelessComponents/Navigation/index';
-import { fetchPeople, fetchPlanetData, fetchVehicles } from '../../helpers/fetch/index';
+import { fetchPlanetData, fetchVehicles } from '../../helpers/fetch/index';
+import { selectCategory } from '../../helpers/selectCategory/index';
+
 // import People from '../../statelessComponents/People/index';
 // import Vehicles from '../../statelessComponents/Vehicles/index';
 // import Planets from '../../statelessComponents/Planets/index';
@@ -27,10 +29,13 @@ class App extends Component {
     };
   }
 
-  fetchByUserSelect = () => {
-    const url = 'http://swapi.co/api/people';
-    fetchPeople(url)
-      .then(people => this.setState({people}));
+  updateCards = async (category) => {
+    const selectedStarWarsData = await selectCategory(category);
+    console.log(selectedStarWarsData);
+    this.setState({
+      [category]: selectedStarWarsData,
+      currentCategory: category
+    });
   }
 
   planetFetch = () => {
@@ -52,9 +57,9 @@ class App extends Component {
     return (
       <div>
         <Navigation 
-          fetchByUserSelect={this.fetchByUserSelect} 
           planetFetch={this.planetFetch} 
           vehicleFetch={this.vehicleFetch}
+          updateCards={this.updateCards}
         />
         <Landing /> 
       </div>
