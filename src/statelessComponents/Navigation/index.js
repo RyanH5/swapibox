@@ -6,7 +6,7 @@ const Navigation = (props) => {
   return (
     <div>
     <button onClick={() => props.updateCards('people')}>People</button>
-      <button onClick={() => props.planetFetch()}>Planets</button>
+      <button onClick={() => props.updateCards('planets')}>Planets</button>
       <button onClick={() => props.vehicleFetch()}>Vehicles</button>  
       <button>Favorites<span></span></button>  
     </div>

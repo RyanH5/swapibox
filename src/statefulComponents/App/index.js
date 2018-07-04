@@ -31,7 +31,6 @@ class App extends Component {
 
   updateCards = async (category) => {
     const selectedStarWarsData = await selectCategory(category);
-    console.log(selectedStarWarsData);
     this.setState({
       [category]: selectedStarWarsData,
       currentCategory: category

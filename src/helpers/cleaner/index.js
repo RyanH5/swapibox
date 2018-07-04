@@ -33,8 +33,8 @@ export const cleanSpeciesData = (specie) => {
 };
 
 // PLANET CLEANERS
-export const cleanPlanetData = (planets) => {
-  const allPlanets = planets.results.map(async planet => {
+export const cleanPlanetData = ({results}) => {
+  const allPlanets = results.map(async planet => {
     const name = planet.name;
     const terrain = planet.terrain;
     const population = planet.population;
@@ -43,14 +43,14 @@ export const cleanPlanetData = (planets) => {
       let residentName = await fetchResidents(resident);
       return residentName;
     });
-    const ans = await Promise.all(eachResident);
+    const residents = await Promise.all(eachResident);
       
     return ({
       name,
       terrain,
       population,
       climate,
-      residents: ans
+      residents
     });
   });
   return Promise.all(allPlanets);
