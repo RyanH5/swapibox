@@ -63,8 +63,8 @@ export const cleanResidents = (planetResident) => {
 
 // VEHICLE CLEANER
 
-export const cleanVehicles = (vehicles) => {
-  const allVehicles = vehicles.map(vehicle => {
+export const cleanVehiclesData = ({results}) => {
+  const allVehicles = results.map(vehicle => {
     const name = vehicle.name;
     const model = vehicle.model;
     const vehicleClass = vehicle.vehicle_class;

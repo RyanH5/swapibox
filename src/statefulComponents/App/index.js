@@ -37,18 +37,6 @@ class App extends Component {
     });
   }
 
-  planetFetch = () => {
-    const url = 'https://swapi.co/api/planets';
-    fetchPlanetData(url)
-      .then(planets => this.setState({planets}));
-  }
-
-  vehicleFetch = () => {
-    const url = 'https://swapi.co/api/vehicles';
-    fetchVehicles(url)
-      .then(vehicles => this.setState({vehicles}));
-  }
-
   componentDidMount() {
   }
 

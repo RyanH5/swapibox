@@ -2,17 +2,16 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import * as routes from '../../helpers/constants/routes';
 
-const Navigation = (props) => {
+const Navigation = ({updateCards}) => {
   return (
     <div>
-    <button onClick={() => props.updateCards('people')}>People</button>
-      <button onClick={() => props.updateCards('planets')}>Planets</button>
-      <button onClick={() => props.vehicleFetch()}>Vehicles</button>  
+      <button onClick={() => updateCards('people')}>People</button>
+      <button onClick={() => updateCards('planets')}>Planets</button>
+      <button onClick={() => updateCards('vehicles')}>Vehicles</button>  
       <button>Favorites<span></span></button>  
     </div>
   );
 };
-
   
 export default Navigation;
 // <div>

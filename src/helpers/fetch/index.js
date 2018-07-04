@@ -1,11 +1,8 @@
 import { 
   cleanFilmCrawl, 
-  cleanPeopleData, 
   cleanHomeworldData, 
   cleanSpeciesData,
-  cleanPlanetData,
-  cleanResidents,
-  cleanVehicles
+  cleanResidents
 } from '../cleaner/index';
 
 // OPENING CRAWL FETCH
@@ -75,22 +72,6 @@ const fetchSpecies = async (url) => {
   }
 };
 
-// FETCH PLANETS FN's
-
-const fetchPlanetData = async (url) => {
-  try {
-    const response = await fetch(url);
-    if (response.status === 200) {
-      const planetData = await response.json();
-      const cleanPlanets = await cleanPlanetData(planetData);
-      console.log('full planets', cleanPlanets)
-      return cleanPlanets;
-    }
-  } catch (error) {
-    throw new Error('failed');
-  }
-};
-
 const fetchResidents = async (url) => {
   try {
     const response = await fetch(url);
@@ -104,20 +85,4 @@ const fetchResidents = async (url) => {
   }
 };
 
-// FETCH VEHICLE DATA
-
-const fetchVehicles = async (url) => {
-  try {
-    const response = await fetch(url);
-    if (response.status === 200) {
-      const vehicleData = await response.json();
-      const cleanedVehicles = await cleanVehicles(vehicleData.results);
-      return cleanedVehicles;
-    }
-  } catch (error) {
-    throw new Error('failed');
-  }
-};
-
-
-export { fetchFilmCrawl, fetchSpecies, fetchHomeworld, fetchPlanetData, fetchResidents, fetchVehicles };
+export { fetchFilmCrawl, fetchSpecies, fetchHomeworld, fetchResidents };
