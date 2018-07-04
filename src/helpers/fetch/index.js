@@ -22,13 +22,13 @@ const fetchFilmCrawl = async () => {
   }
 };
 
-const fetchPeople = async () => {
-  const url = 'http://swapi.co/api/people';
+const fetchPeople = async (url) => {
   try {
     const response = await fetch(url);
     if (response.status === 200) {
       const peopleData = await response.json();
-      const cleanedPeopleData = cleanPeopleData(peopleData);
+      const cleanedPeopleData = await cleanPeopleData(peopleData.results);
+      console.log('cleanedPeople', cleanedPeopleData)
       return cleanedPeopleData;
     } else {
       throw new Error( response.status );

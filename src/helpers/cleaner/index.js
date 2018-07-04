@@ -6,17 +6,18 @@ export const cleanFilmCrawl = (filmCrawl) => {
 };
 
 export const cleanPeopleData = (peopleData) => {
-  peopleData.results.map(person => {
+  const allPeople = peopleData.map(async person => {
     const name = person.name;
-    const homeworldData = fetchHomeworld(person.homeworld);
-    const specieData = fetchSpecies(person.species);
+    const homeworldData = await fetchHomeworld(person.homeworld);
+    const specieData = await fetchSpecies(person.species);
     return {
       name, 
       homeworld: homeworldData.homeworld,
-      species: specieData.name,
+      species: specieData.specieName,
       population: homeworldData.population
     };
   });
+  return Promise.all(allPeople);
 };
 
 export const cleanHomeworldData = (planet) => {

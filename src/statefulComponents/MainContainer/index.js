@@ -1,26 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class MainContainer extends Component {
-  constructor() {
-    super();
-    this.state = {
-      people: [],
-      planets: [],
-      vehicles: [],
-      favorites: [],
-      loading: false,
-      currentCategory: ''
-    };
-  }
-
-
-  render() {
-    return (
-      <div>
-      </div>
-    );
-  }
-}
+const MainContainer = () => {
+  return (
+    <div>
+      hey
+    </div>
+  );
+};
 
 export default MainContainer;
 
