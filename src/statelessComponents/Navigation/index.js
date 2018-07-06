@@ -5,9 +5,9 @@ import * as routes from '../../helpers/constants/routes';
 const Navigation = ({updateCards}) => {
   return (
     <div>
-      <button onClick={() => updateCards('people')}>People</button>
-      <button onClick={() => updateCards('planets')}>Planets</button>
-      <button onClick={() => updateCards('vehicles')}>Vehicles</button>  
+      <button onClick={() => updateCards('https://swapi.co/api/people/')}>People</button>
+      <button onClick={() => updateCards('https://swapi.co/api/planets/')}>Planets</button>
+      <button onClick={() => updateCards('https://swapi.co/api/vehicles/')}>Vehicles</button>  
       <button>Favorites<span></span></button>  
     </div>
   );

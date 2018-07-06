@@ -1,16 +1,19 @@
-import { fetchSpecies, fetchHomeworld, fetchResidents } from '../fetch/index';
+import { fetchStarWarsData } from '../fetch/index';
+import { getData } from '../selectCategory/index';
 
-export const cleanFilmCrawl = (filmCrawl) => {
+export const cleanFilmCrawlData = async (url) => {
+  const filmCrawl = await fetchStarWarsData(url);
   const year = filmCrawl.release_date.split('-', 1).toString();
   return {title: filmCrawl.title, year, crawl: filmCrawl.opening_crawl};
 };
 
 // PEOPLE CLEANERS
-export const cleanPeopleData = ({results}) => {
+export const cleanPeopleData = async (url) => {
+  const {results} = await fetchStarWarsData(url);
   const allPeople = results.map(async person => {
     const name = person.name;
-    const homeworldData = await fetchHomeworld(person.homeworld);
-    const specieData = await fetchSpecies(person.species);
+    const homeworldData = await getData(person.homeworld);
+    const specieData = await getData(...person.species);
     return {
       name, 
       homeworld: homeworldData.homeworld,
@@ -21,26 +24,29 @@ export const cleanPeopleData = ({results}) => {
   return Promise.all(allPeople);
 };
 
-export const cleanHomeworldData = (planet) => {
+export const cleanHomeworldData = async (url) => {
+  const planet = await fetchStarWarsData(url);
   const homeworld = planet.name;
   const population = planet.population;
   return {homeworld, population};
 };
 
-export const cleanSpeciesData = (specie) => {
+export const cleanSpeciesData = async (url) => {
+  const specie = await fetchStarWarsData(url);
   const specieName = specie.name;
   return {specieName};
 };
 
 // PLANET CLEANERS
-export const cleanPlanetData = ({results}) => {
+export const cleanPlanetData = async (url) => {
+  const {results} = await fetchStarWarsData(url);
   const allPlanets = results.map(async planet => {
     const name = planet.name;
     const terrain = planet.terrain;
     const population = planet.population;
     const climate = planet.climate;
     let eachResident = planet.residents.map(async resident => {
-      let residentName = await fetchResidents(resident);
+      let residentName = await getData(resident);
       return residentName;
     });
     const residents = await Promise.all(eachResident);
@@ -56,14 +62,16 @@ export const cleanPlanetData = ({results}) => {
   return Promise.all(allPlanets);
 };
 
-export const cleanResidents = (planetResident) => {
+export const cleanResidentsData = async (url) => {
+  const planetResident = await fetchStarWarsData(url);
   const resident = planetResident.name;
-  return {resident};
+  return resident;
 };
 
 // VEHICLE CLEANER
 
-export const cleanVehiclesData = ({results}) => {
+export const cleanVehiclesData = async (url) => {
+  const {results} = await fetchStarWarsData(url);
   const allVehicles = results.map(vehicle => {
     const name = vehicle.name;
     const model = vehicle.model;

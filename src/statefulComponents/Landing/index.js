@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { fetchFilmCrawl } from '../../helpers/fetch/index';
+import {getData} from '../../helpers/selectCategory/index'
 
 class Landing extends Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class Landing extends Component {
   }
 
   async componentDidMount() {
-    const filmData = await fetchFilmCrawl();
+    const randomNum = Math.floor(Math.random() * 7) + 1 
+    const filmData = await getData(`https://swapi.co/api/films/${randomNum}`);
     const {title, year, crawl} = filmData;
     this.setState({crawl, title, year});
   }
