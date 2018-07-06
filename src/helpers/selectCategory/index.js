@@ -1,9 +1,8 @@
-import { fetchStarWarsData } from '../fetch/index';
 import { cleanPeopleData, cleanPlanetData, cleanVehiclesData, cleanFilmCrawlData, cleanSpeciesData, cleanResidentsData, cleanHomeworldData } from '../cleaner/index';
-// import { rout } from 'constants';
 
 export const getData = async (url) => {
-  const category = getCategory(url)
+  let splitUrl;
+  const category = getCategory(url);
   switch (category) {
     case 'people':
       splitUrl = url.split("/");
@@ -14,7 +13,7 @@ export const getData = async (url) => {
       }
     
     case 'planets':
-      let splitUrl = url.split("/");
+      splitUrl = url.split("/");
       if (splitUrl[5]) {
         return cleanHomeworldData(url);
       } else {
@@ -36,4 +35,4 @@ export const getData = async (url) => {
 export const getCategory = (url) => {
   const splitUrl = url.split("/");
   return splitUrl[4];
-}
+};
