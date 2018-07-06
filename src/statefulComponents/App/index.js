@@ -8,7 +8,8 @@ import {
 import Landing from '../Landing/index';
 import Navigation from '../../statelessComponents/Navigation/index';
 import { fetchPlanetData, fetchVehicles } from '../../helpers/fetch/index';
-import { selectCategory } from '../../helpers/selectCategory/index';
+import { getData } from '../../helpers/selectCategory/index';
+import {getCategory} from '../../helpers/selectCategory/index'
 
 // import People from '../../statelessComponents/People/index';
 // import Vehicles from '../../statelessComponents/Vehicles/index';
@@ -29,8 +30,9 @@ class App extends Component {
     };
   }
 
-  updateCards = async (category) => {
-    const selectedStarWarsData = await selectCategory(category);
+  updateCards = async (url) => {
+    const selectedStarWarsData = await getData(url);
+    const category = getCategory(url)
     this.setState({
       [category]: selectedStarWarsData,
       currentCategory: category
@@ -44,8 +46,6 @@ class App extends Component {
     return (
       <div>
         <Navigation 
-          planetFetch={this.planetFetch} 
-          vehicleFetch={this.vehicleFetch}
           updateCards={this.updateCards}
         />
         <Landing /> 
