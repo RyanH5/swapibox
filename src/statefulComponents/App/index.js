@@ -42,8 +42,9 @@ class App extends Component {
         <Navigation 
           updateCards={this.updateCards}
         />
+        {this.state.currentCategory === 'films' &&
         <Landing 
-          currentCategory={this.state.currentCategory}/> 
+          currentCategory={this.state.currentCategory}/> }
         <MainContainer 
           categoryData={this.state[this.state.currentCategory]}
           currentCategory={this.state.currentCategory}
