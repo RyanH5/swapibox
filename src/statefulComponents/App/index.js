@@ -18,9 +18,8 @@ class App extends Component {
       planets: [],
       vehicles: [],
       favorites: [],
-      loading: false,
       currentCategory: 'films',
-      errorStatus: '',
+      errorStatus: ''
     };
   }
 
@@ -37,6 +36,7 @@ class App extends Component {
   }
 
   toggleFavorite = ({id}) => {
+    console.log(id)
     const { favorites, currentCategory } = this.state;
     const hasID = favorites.filter(fav => id === fav.id);
     if (hasID.length) {
@@ -52,8 +52,14 @@ class App extends Component {
       });
       this.setState({
         favorites: [...favorites, ...newFav]
-      });      
+      });   
     }
+  }
+
+  displayFavorites = () => {
+    this.setState({
+      currentCategory: 'favorites'
+    });
   }
 
 
@@ -63,6 +69,7 @@ class App extends Component {
       <div>
         <Navigation 
           updateCards={this.updateCards}
+          displayFavorites={this.displayFavorites}
         />
         {currentCategory === 'films' &&
         <Landing 

@@ -1,0 +1,276 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match snapshot with all data 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    currentCategory="people"
+    favorites={
+        Array [
+            Object {
+              "homeworld": "Tatooine",
+              "id": "peopleLuke Skywalker",
+              "name": "Luke Skywalker",
+              "population": "200000",
+              "species": "Human",
+            },
+          ]
+    }
+    homeworld="Florida"
+    id="people Jeff"
+    name="Jeff"
+    population="10000"
+    species="Human"
+    toggleFavorite={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <span
+          className="inactive"
+          onClick={[Function]}
+>
+          ✰
+</span>,
+        <h1>
+          Name: 
+          Jeff
+</h1>,
+        <h2>
+          Homeworld: 
+          Florida
+</h2>,
+        <h3>
+          Species: 
+          Human
+</h3>,
+        <h5>
+          Homeworld Population: 
+          10000
+</h5>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "✰",
+          "className": "inactive",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "✰",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Name: ",
+            "Jeff",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Name: ",
+          "Jeff",
+        ],
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Homeworld: ",
+            "Florida",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Homeworld: ",
+          "Florida",
+        ],
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Species: ",
+            "Human",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Species: ",
+          "Human",
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Homeworld Population: ",
+            "10000",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Homeworld Population: ",
+          "10000",
+        ],
+        "type": "h5",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <span
+            className="inactive"
+            onClick={[Function]}
+>
+            ✰
+</span>,
+          <h1>
+            Name: 
+            Jeff
+</h1>,
+          <h2>
+            Homeworld: 
+            Florida
+</h2>,
+          <h3>
+            Species: 
+            Human
+</h3>,
+          <h5>
+            Homeworld Population: 
+            10000
+</h5>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "✰",
+            "className": "inactive",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "✰",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Name: ",
+              "Jeff",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Name: ",
+            "Jeff",
+          ],
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Homeworld: ",
+              "Florida",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Homeworld: ",
+            "Florida",
+          ],
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Species: ",
+              "Human",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Species: ",
+            "Human",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Homeworld Population: ",
+              "10000",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Homeworld Population: ",
+            "10000",
+          ],
+          "type": "h5",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
