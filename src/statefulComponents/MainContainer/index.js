@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from '../Card/index';
+import PropTypes from 'prop-types';
 
 const MainContainer = ({categoryData, currentCategory} ) => {
   let displayCards = [];
@@ -18,6 +19,11 @@ const MainContainer = ({categoryData, currentCategory} ) => {
       {displayCards}
     </div>
   );
+};
+
+MainContainer.propTypes = {
+  categoryData: PropTypes.array,
+  currentCategory: PropTypes.string.isRequired
 };
 
   
