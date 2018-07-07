@@ -1,12 +1,25 @@
 import React from 'react';
+import { Card } from '../Card/index';
 
-const MainContainer = () => {
+const MainContainer = ({categoryData, currentCategory} ) => {
+  let displayCards = [];
+  if (categoryData) {
+    displayCards = categoryData.map((catData, index) => {
+      return <Card 
+        {...catData} 
+        key={index} 
+        currentCategory={currentCategory} 
+      />;
+    });
+  }
+ 
   return (
     <div>
-      hey
+      {displayCards}
     </div>
   );
 };
 
-export default MainContainer;
+  
 
+export default MainContainer;

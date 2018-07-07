@@ -7,15 +7,8 @@ import {
 } from 'react-router-dom';
 import Landing from '../Landing/index';
 import Navigation from '../../statelessComponents/Navigation/index';
-import { fetchPlanetData, fetchVehicles } from '../../helpers/fetch/index';
-import { getData } from '../../helpers/selectCategory/index';
-import {getCategory} from '../../helpers/selectCategory/index'
-
-// import People from '../../statelessComponents/People/index';
-// import Vehicles from '../../statelessComponents/Vehicles/index';
-// import Planets from '../../statelessComponents/Planets/index';
-// import Favorites from '../../statelessComponents/Favorites/index';
-// import * as routes from '../../helpers/constants/routes';
+import { getData, getCategory } from '../../helpers/selectCategory/index';
+import MainContainer from '../MainContainer/index';
 
 class App extends Component {
   constructor(props) {
@@ -26,13 +19,14 @@ class App extends Component {
       vehicles: [],
       favorites: [],
       loading: false,
-      currentCategory: ''
+      currentCategory: 'films',
+      errorStatus: ''
     };
   }
 
   updateCards = async (url) => {
     const selectedStarWarsData = await getData(url);
-    const category = getCategory(url)
+    const category = getCategory(url);
     this.setState({
       [category]: selectedStarWarsData,
       currentCategory: category
@@ -48,7 +42,13 @@ class App extends Component {
         <Navigation 
           updateCards={this.updateCards}
         />
-        <Landing /> 
+        {this.state.currentCategory === 'films' &&
+        <Landing 
+          currentCategory={this.state.currentCategory}/> }
+        <MainContainer 
+          categoryData={this.state[this.state.currentCategory]}
+          currentCategory={this.state.currentCategory}
+        />
       </div>
     );
   }
