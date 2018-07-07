@@ -38,9 +38,10 @@ class App extends Component {
 
   toggleFavorite = ({id}) => {
     const { favorites, currentCategory } = this.state;
-    if (favorites.includes(id)) {
+    const hasID = favorites.filter(fav => id === fav.id).length  === 1;
+    if (hasID) {
       const newFavs = favorites.filter(eachFavorite => {
-        return eachFavorite.id !== id.id;
+        return eachFavorite.id !== id;
       });
       this.setState({
         favorites: [...newFavs]
@@ -50,7 +51,7 @@ class App extends Component {
         return card.id === id;
       });
       this.setState({
-        favorites: [...favorites, newFav]
+        favorites: [...favorites, ...newFav]
       });      
     }
   }
