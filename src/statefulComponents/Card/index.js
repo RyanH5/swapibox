@@ -15,14 +15,22 @@ export const Card = (props) => {
     climate,
     residents,
     toggleFavorite,
-    id
+    id,
+    favorites
   } = props;
+  
+  const selected = favorites.filter(fav => {
+    return fav.id === id;
+  });
+
   switch (currentCategory) {
     case 'people':
       return (
         <div>
-          <span 
-            onClick={() => toggleFavorite({id})}>
+          <span
+            onClick={() => toggleFavorite({id})}
+            className={selected.length ? 'active' : 'inactive'}
+          >
             ✰</span>
           <h1>Name: {name}</h1>
           <h2>Homeworld: {homeworld}</h2>
@@ -35,7 +43,9 @@ export const Card = (props) => {
       return (
         <div>
           <span 
-            onClick={() => toggleFavorite({id})}>
+            onClick={() => toggleFavorite({id})}
+            className={selected.length ? 'active' : 'inactive'}
+          >
             ✰</span>
           <h1>Name: {name}</h1>
           <h2>Model: {model}</h2>
@@ -48,7 +58,9 @@ export const Card = (props) => {
       return (
         <div>
           <span 
-            onClick={() => toggleFavorite({id})}>
+            onClick={() => toggleFavorite({id})}
+            className={selected.length ? 'active' : 'inactive'}
+          >
             ✰</span>
           <h1>Name: {name}</h1>
           <h2>Terrain: {terrain}</h2>
@@ -73,5 +85,6 @@ Card.propTypes = {
   climate: PropTypes.string,
   residents: PropTypes.array,
   id: PropTypes.string,
-  toggleFavorite: PropTypes.func
+  toggleFavorite: PropTypes.func,
+  favorites: PropTypes.array
 };

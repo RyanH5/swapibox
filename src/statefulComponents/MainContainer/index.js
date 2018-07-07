@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from '../Card/index';
 import PropTypes from 'prop-types';
 
-const MainContainer = ({categoryData, currentCategory, toggleFavorite} ) => {
+const MainContainer = ({categoryData, currentCategory, toggleFavorite, favorites} ) => {
   let displayCards = [];
   if (categoryData) {
     displayCards = categoryData.map((catData, index) => {
@@ -12,6 +12,7 @@ const MainContainer = ({categoryData, currentCategory, toggleFavorite} ) => {
         id={currentCategory + catData.name} 
         currentCategory={currentCategory} 
         toggleFavorite={toggleFavorite}
+        favorites={favorites}
       />;
     });
   }

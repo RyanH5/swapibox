@@ -20,7 +20,7 @@ class App extends Component {
       favorites: [],
       loading: false,
       currentCategory: 'films',
-      errorStatus: ''
+      errorStatus: '',
     };
   }
 
@@ -38,8 +38,8 @@ class App extends Component {
 
   toggleFavorite = ({id}) => {
     const { favorites, currentCategory } = this.state;
-    const hasID = favorites.filter(fav => id === fav.id).length  === 1;
-    if (hasID) {
+    const hasID = favorites.filter(fav => id === fav.id);
+    if (hasID.length) {
       const newFavs = favorites.filter(eachFavorite => {
         return eachFavorite.id !== id;
       });
@@ -58,18 +58,20 @@ class App extends Component {
 
 
   render() {
+    const { currentCategory, favorites} = this.state;
     return (
       <div>
         <Navigation 
           updateCards={this.updateCards}
         />
-        {this.state.currentCategory === 'films' &&
+        {currentCategory === 'films' &&
         <Landing 
-          currentCategory={this.state.currentCategory}/> }
+          currentCategory={currentCategory}/> }
         <MainContainer 
-          categoryData={this.state[this.state.currentCategory]}
-          currentCategory={this.state.currentCategory}
+          categoryData={this.state[currentCategory]}
+          currentCategory={currentCategory}
           toggleFavorite={this.toggleFavorite}
+          favorites={favorites}
         />
       </div>
     );
