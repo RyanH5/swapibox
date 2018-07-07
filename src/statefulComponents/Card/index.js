@@ -13,12 +13,17 @@ export const Card = (props) => {
     passengers,
     terrain,
     climate,
-    residents
+    residents,
+    toggleFavorite,
+    id
   } = props;
   switch (currentCategory) {
     case 'people':
       return (
         <div>
+          <span 
+            onClick={() => toggleFavorite({id})}>
+            ✰</span>
           <h1>Name: {name}</h1>
           <h2>Homeworld: {homeworld}</h2>
           <h3>Species: {species}</h3>
@@ -29,6 +34,9 @@ export const Card = (props) => {
     case 'vehicles':
       return (
         <div>
+          <span 
+            onClick={() => toggleFavorite({id})}>
+            ✰</span>
           <h1>Name: {name}</h1>
           <h2>Model: {model}</h2>
           <h3>Class: {vehicleClass}</h3>
@@ -39,6 +47,9 @@ export const Card = (props) => {
     case 'planets':
       return (
         <div>
+          <span 
+            onClick={() => toggleFavorite({id})}>
+            ✰</span>
           <h1>Name: {name}</h1>
           <h2>Terrain: {terrain}</h2>
           <h3>Climage: {climate}</h3>
@@ -60,5 +71,7 @@ Card.propTypes = {
   passengers: PropTypes.string,
   terrain: PropTypes.string,
   climate: PropTypes.string,
-  residents: PropTypes.array
+  residents: PropTypes.array,
+  id: PropTypes.string,
+  toggleFavorite: PropTypes.func
 };

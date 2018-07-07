@@ -1,4 +1,12 @@
-import { cleanPeopleData, cleanPlanetData, cleanVehiclesData, cleanFilmCrawlData, cleanSpeciesData, cleanResidentsData, cleanHomeworldData } from '../cleaner/index';
+import { 
+  cleanPeopleData, 
+  cleanPlanetData, 
+  cleanVehiclesData, 
+  cleanFilmCrawlData, 
+  cleanSpeciesData, 
+  cleanResidentsData, 
+  cleanHomeworldData 
+} from '../cleaner/index';
 
 export const getData = async (url) => {
   let splitUrl;

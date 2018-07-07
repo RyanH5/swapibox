@@ -2,14 +2,16 @@ import React from 'react';
 import { Card } from '../Card/index';
 import PropTypes from 'prop-types';
 
-const MainContainer = ({categoryData, currentCategory} ) => {
+const MainContainer = ({categoryData, currentCategory, toggleFavorite} ) => {
   let displayCards = [];
   if (categoryData) {
     displayCards = categoryData.map((catData, index) => {
       return <Card 
         {...catData} 
-        key={index} 
+        key={index}
+        id={currentCategory + catData.name} 
         currentCategory={currentCategory} 
+        toggleFavorite={toggleFavorite}
       />;
     });
   }
@@ -22,8 +24,9 @@ const MainContainer = ({categoryData, currentCategory} ) => {
 };
 
 MainContainer.propTypes = {
+  currentCategory: PropTypes.string.isRequired,
   categoryData: PropTypes.array,
-  currentCategory: PropTypes.string.isRequired
+  toggleFavorite: PropTypes.func
 };
 
   
