@@ -28,8 +28,8 @@ export const Card = (props) => {
       return (
         <div>
           <span
-            onClick={() => toggleFavorite({id})}
-            className={selected.length ? 'active' : 'inactive'}
+            onClick={() => toggleFavorite({id})}         
+            className={selected.length ? 'fav active' : 'fav inactive'}
           >
             ✰</span>
           <h1>Name: {name}</h1>

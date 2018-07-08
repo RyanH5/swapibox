@@ -70,6 +70,7 @@ class App extends Component {
         <Navigation 
           updateCards={this.updateCards}
           displayFavorites={this.displayFavorites}
+          favorites={favorites}
         />
         {currentCategory === 'films' &&
         <Landing 

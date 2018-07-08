@@ -38,7 +38,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <span
-          className="inactive"
+          className="fav inactive"
           onClick={[Function]}
 >
           ✰
@@ -69,7 +69,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "✰",
-          "className": "inactive",
+          "className": "fav inactive",
           "onClick": [Function],
         },
         "ref": null,
@@ -155,7 +155,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <span
-            className="inactive"
+            className="fav inactive"
             onClick={[Function]}
 >
             ✰
@@ -186,7 +186,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "✰",
-            "className": "inactive",
+            "className": "fav inactive",
             "onClick": [Function],
           },
           "ref": null,

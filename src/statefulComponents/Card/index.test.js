@@ -3,8 +3,12 @@ import { shallow } from 'enzyme';
 import { Card } from './index';
 
 describe('Card', () => {
-  it('should match snapshot with all data', () => {
-    const wrapper = shallow(<Card
+  let wrapper;
+  let toggleFavorite;
+  let id;
+
+  beforeEach(() => {
+    wrapper = shallow(<Card
       currentCategory='people'
       name='Jeff'
       homeworld='Florida'
@@ -23,6 +27,17 @@ describe('Card', () => {
       }
     />);
 
+    toggleFavorite = jest.fn();
+    id = "peopleLuke Skywalker";
+  });
+  it('should match snapshot with all data', () => {
+
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should invoke toggleFavorite when star is clicked', () => {
+    wrapper.find('.fav').simulate('click');
+
+    expect(wrapper.find('.active').length.toEqual(1));
   });
 });
