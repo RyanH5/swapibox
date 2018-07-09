@@ -1,0 +1,9 @@
+body {
+  background: url(https://datahero.com/wp-content/uploads/2017/12/StarWars.gif) no-repeat center center fixed;
+  background-size: cover;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}

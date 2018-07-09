@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from '../Card/index';
 import PropTypes from 'prop-types';
+import './styles.css';
 
 export const MainContainer = ({
   categoryData, 
