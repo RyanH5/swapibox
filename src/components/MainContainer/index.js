@@ -26,6 +26,9 @@ export const MainContainer = ({
  
   return (
     <div className={'container'}>
+      {currentCategory === 'favorites' && !favorites.length &&
+        <h1>CHOOSE FAVORITES FIRST,<br></br> YOU MUST!</h1>
+      }
       {displayCards}
     </div>
   );

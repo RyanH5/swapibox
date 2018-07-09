@@ -55,7 +55,6 @@ class App extends Component {
     });
   }
 
-
   render() {
     const { currentCategory, favorites} = this.state;
     return (
