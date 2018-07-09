@@ -20,5 +20,13 @@
   "devDependencies": {
     "babel-eslint": "^8.2.5",
     "eslint": "^5.0.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/setupTests.js",
+      "!src/registerServiceWorker.js"
+    ]
   }
 }

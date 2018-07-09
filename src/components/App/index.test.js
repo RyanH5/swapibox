@@ -33,11 +33,18 @@ describe('App', () => {
     expect(wrapper.state('errorStatus')).toEqual('');   
   });
 
-  
-
-  it('should set currentCategory: favorites when favorites is clicked', () => {
-    wrapper.instance().displayFavorites();
-
-    expect(wrapper.state('currentCategory')).toEqual('favorites');
+  describe('displayFavorites', () => {
+    it('should set currentCategory: favorites when favorites is clicked', () => {
+      wrapper.instance().displayFavorites();
+    
+      expect(wrapper.state('currentCategory')).toEqual('favorites');
+    });
   });
-});
+
+  describe('updateCards', () => {
+    it.skip('should call getData with correct params', async () => {
+      let mockUrl = 'https://swapi.co/api/people';
+      wrapper.instance().updateCards(mockUrl);
+  
+      expect(getData).toHaveBeenCalledWith(mockUrl);
+    });
