@@ -25,7 +25,7 @@ export const MainContainer = ({
   }
  
   return (
-    <div>
+    <div className={'container'}>
       {displayCards}
     </div>
   );

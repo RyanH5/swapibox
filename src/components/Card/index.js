@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './styles.css';
 
 export const Card = (props) => {
   const {
@@ -26,7 +27,7 @@ export const Card = (props) => {
   switch (currentCategory) {
     case 'people':
       return (
-        <div>
+        <div className={'card'}>
           <span
             onClick={() => toggleFavorite({id})}         
             className={selected.length ? 'fav active' : 'fav inactive'}
@@ -35,13 +36,13 @@ export const Card = (props) => {
           <h1>Name: {name}</h1>
           <h2>Homeworld: {homeworld}</h2>
           <h3>Species: {species}</h3>
-          <h5>Homeworld Population: {population}</h5>
+          <h4>Homeworld Population: {population}</h4>
         </div>
       );
 
     case 'vehicles':
       return (
-        <div>
+        <div div className={'card'}>
           <span 
             onClick={() => toggleFavorite({id})}
             className={selected.length ? 'active' : 'inactive'}
@@ -50,13 +51,13 @@ export const Card = (props) => {
           <h1>Name: {name}</h1>
           <h2>Model: {model}</h2>
           <h3>Class: {vehicleClass}</h3>
-          <h5>Passengers: {passengers}</h5>
+          <h4>Passengers: {passengers}</h4>
         </div>
       );
 
     case 'planets':
       return (
-        <div>
+        <div div className={'card'}>
           <span 
             onClick={() => toggleFavorite({id})}
             className={selected.length ? 'active' : 'inactive'}
@@ -66,13 +67,13 @@ export const Card = (props) => {
           <h2>Terrain: {terrain}</h2>
           <h3>Climage: {climate}</h3>
           <h4>Population: {population}</h4>
-          <h5>Residents: {residents}</h5>
+          <h4>Residents: {residents}</h4>
         </div>
       );
 
     case 'favorites':
       return (
-        <div>
+        <div div className={'card'}>
           <span 
             onClick={() => toggleFavorite({id})}
             className={selected.length ? 'active' : 'inactive'}
@@ -82,13 +83,13 @@ export const Card = (props) => {
           <h2>{terrain}</h2>
           <h3>{climate}</h3>
           <h4>{population}</h4>
-          <h5>{residents}</h5>
+          <h4>{residents}</h4>
           <h2>{model}</h2>
           <h3>{vehicleClass}</h3>
-          <h5>{passengers}</h5>
+          <h4>{passengers}</h4>
           <h2>{homeworld}</h2>
           <h3>{species}</h3>
-          <h5>{population}</h5>
+          <h4>{population}</h4>
         </div>
       );
   }

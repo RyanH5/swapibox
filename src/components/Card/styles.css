@@ -1,0 +1,30 @@
+.card {
+  width: 30%;
+  border: solid 2px #ccc;
+  padding: 10px;
+  margin: 10px 0px;
+  position: relative;
+}
+
+h5 {
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 12px;  
+}
+
+.active {
+  color: black;
+  background: #feda4a;
+  border-radius: 50%;
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+}
+
+.inactive {
+  border-radius: 50%;
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+  
+}
