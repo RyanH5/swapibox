@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './styles.css';
 
 export const Navigation = ({
   updateCards, 
@@ -7,7 +8,7 @@ export const Navigation = ({
   favorites
 }) => {
   return (
-    <div>
+    <div className={'nav'}>
       <button onClick={() => updateCards('https://swapi.co/api/people/')}>
       People</button>
       <button onClick={() => updateCards('https://swapi.co/api/planets/')}>
