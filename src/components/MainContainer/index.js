@@ -16,7 +16,7 @@ export const MainContainer = ({
       return <Card 
         {...catData} 
         key={index}
-        id={currentCategory + catData.name} 
+        id={catData.name} 
         currentCategory={currentCategory} 
         toggleFavorite={toggleFavorite}
         favorites={favorites}

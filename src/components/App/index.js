@@ -21,7 +21,7 @@ class App extends Component {
     const selectedStarWarsData = await getData(url);
     const category = getCategory(url);
     const dataWithId = selectedStarWarsData.map(card => {
-      return {...card, id: category + card.name};
+      return {...card, id: card.name};
     });
     this.setState({
       [category]: dataWithId,
