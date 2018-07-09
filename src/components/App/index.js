@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Landing from '../Landing/index';
-import Navigation from '../../statelessComponents/Navigation/index';
+import Navigation from '../Navigation/index';
 import { getData, getCategory } from '../../helpers/selectCategory/index';
 import MainContainer from '../MainContainer/index';
 
