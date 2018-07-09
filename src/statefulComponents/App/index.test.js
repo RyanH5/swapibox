@@ -1,13 +1,43 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './index';
-import { BrowserRouter } from 'react-router-dom';
+import { shallow } from 'enzyme';
 
-const router = (
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+describe('App', () => {
+  let wrapper;
+  let defaultState;
 
-ReactDOM.render(router, document.getElementById('root'));
+  beforeEach(() => {
+    wrapper = shallow(<App />, {disableLifeCycleMethods: true});
+    defaultState = {
+      people: [],
+      planets: [],
+      vehicles: [],
+      favorites: [],
+      currentCategory: 'films',
+      errorStatus: ''
+    };
+  });
 
+  it('should match the snapshot', () => {
+
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render the correct default state', () => {
+
+    expect(wrapper.state('people')).toEqual([]);    
+    expect(wrapper.state('planets')).toEqual([]);
+    expect(wrapper.state('vehicles')).toEqual([]);
+    expect(wrapper.state('favorites')).toEqual([]);
+    expect(wrapper.state('currentCategory')).toEqual('films');
+    expect(wrapper.state('errorStatus')).toEqual('');   
+  });
+
+  
+
+  it('should set currentCategory: favorites when favorites is clicked', () => {
+    wrapper.instance().displayFavorites();
+
+    expect(wrapper.state('currentCategory')).toEqual('favorites');
+  });
+});

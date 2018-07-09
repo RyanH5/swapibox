@@ -36,7 +36,6 @@ class App extends Component {
   }
 
   toggleFavorite = ({id}) => {
-    console.log(id)
     const { favorites, currentCategory } = this.state;
     const hasID = favorites.filter(fav => id === fav.id);
     if (hasID.length) {

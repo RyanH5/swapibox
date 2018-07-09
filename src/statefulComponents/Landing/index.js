@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {getData} from '../../helpers/selectCategory/index';
+import { getData } from '../../helpers/selectCategory/index';
 
 class Landing extends Component {
   constructor(props) {
