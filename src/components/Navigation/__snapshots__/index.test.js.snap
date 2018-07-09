@@ -55,6 +55,7 @@ ShallowWrapper {
           </span>
 </button>,
       ],
+      "className": "nav",
     },
     "ref": null,
     "rendered": Array [
@@ -158,6 +159,7 @@ ShallowWrapper {
             </span>
 </button>,
         ],
+        "className": "nav",
       },
       "ref": null,
       "rendered": Array [

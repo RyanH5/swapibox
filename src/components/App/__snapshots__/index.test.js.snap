@@ -26,12 +26,7 @@ ShallowWrapper {
         <Landing
           currentCategory="films"
 />,
-        <Unknown
-          categoryData={undefined}
-          currentCategory="films"
-          favorites={Array []}
-          toggleFavorite={[Function]}
-/>,
+        false,
       ],
     },
     "ref": null,
@@ -60,20 +55,7 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "categoryData": undefined,
-          "currentCategory": "films",
-          "favorites": Array [],
-          "toggleFavorite": [Function],
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+      false,
     ],
     "type": "div",
   },
@@ -92,12 +74,7 @@ ShallowWrapper {
           <Landing
             currentCategory="films"
 />,
-          <Unknown
-            categoryData={undefined}
-            currentCategory="films"
-            favorites={Array []}
-            toggleFavorite={[Function]}
-/>,
+          false,
         ],
       },
       "ref": null,
@@ -126,20 +103,7 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "categoryData": undefined,
-            "currentCategory": "films",
-            "favorites": Array [],
-            "toggleFavorite": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+        false,
       ],
       "type": "div",
     },

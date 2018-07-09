@@ -18,10 +18,20 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2 />,
-        <p />,
-        <h4 />,
+        <div
+          className="fade"
+/>,
+        <main>
+          <div
+                    className="crawl"
+          >
+                    <h2 />
+                    <p />
+                    <h4 />
+          </div>
+</main>,
       ],
+      "className": "landing",
     },
     "ref": null,
     "rendered": Array [
@@ -30,33 +40,77 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "",
+          "className": "fade",
         },
         "ref": null,
-        "rendered": "",
-        "type": "h2",
+        "rendered": null,
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "",
+          "children": <div
+            className="crawl"
+>
+            <h2 />
+            <p />
+            <h4 />
+</div>,
         },
         "ref": null,
-        "rendered": "",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2 />,
+              <p />,
+              <h4 />,
+            ],
+            "className": "crawl",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "",
+              },
+              "ref": null,
+              "rendered": "",
+              "type": "h4",
+            },
+          ],
+          "type": "div",
         },
-        "ref": null,
-        "rendered": "",
-        "type": "h4",
+        "type": "main",
       },
     ],
     "type": "div",
@@ -68,10 +122,20 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2 />,
-          <p />,
-          <h4 />,
+          <div
+            className="fade"
+/>,
+          <main>
+            <div
+                        className="crawl"
+            >
+                        <h2 />
+                        <p />
+                        <h4 />
+            </div>
+</main>,
         ],
+        "className": "landing",
       },
       "ref": null,
       "rendered": Array [
@@ -80,33 +144,77 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "",
+            "className": "fade",
           },
           "ref": null,
-          "rendered": "",
-          "type": "h2",
+          "rendered": null,
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "",
+            "children": <div
+              className="crawl"
+>
+              <h2 />
+              <p />
+              <h4 />
+</div>,
           },
           "ref": null,
-          "rendered": "",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2 />,
+                <p />,
+                <h4 />,
+              ],
+              "className": "crawl",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "",
+                },
+                "ref": null,
+                "rendered": "",
+                "type": "h4",
+              },
+            ],
+            "type": "div",
           },
-          "ref": null,
-          "rendered": "",
-          "type": "h4",
+          "type": "main",
         },
       ],
       "type": "div",

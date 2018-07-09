@@ -8,15 +8,18 @@ export const Navigation = ({
   favorites
 }) => {
   return (
-    <div className={'nav'}>
-      <button onClick={() => updateCards('https://swapi.co/api/people/')}>
-      People</button>
-      <button onClick={() => updateCards('https://swapi.co/api/planets/')}>
-      Planets</button>
-      <button onClick={() => updateCards('https://swapi.co/api/vehicles/')}>
-      Vehicles</button>  
-      <button onClick={() => displayFavorites()}>
-      Favorites<span>{favorites.length}</span></button>  
+    <div>
+      <h1 className={'star-wars'}>STAR WARS</h1>
+      <div className={'nav'}>
+        <button onClick={() => updateCards('https://swapi.co/api/people/')}>
+        People</button>
+        <button onClick={() => updateCards('https://swapi.co/api/planets/')}>
+        Planets</button>
+        <button onClick={() => updateCards('https://swapi.co/api/vehicles/')}>
+        Vehicles</button>  
+        <button onClick={() => displayFavorites()}>
+        Favorites<span>{favorites.length}</span></button>  
+      </div>
     </div>
   );
 };
