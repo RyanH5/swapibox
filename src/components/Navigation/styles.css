@@ -1,10 +1,10 @@
 .nav {
   z-index: 100;
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: space-around;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 20px;
 }
 
 button {
@@ -37,4 +37,11 @@ span {
   padding: 0px 5px;
   font-size: 1.2rem;
   margin-left: 6px;
+}
+
+@media screen,print (max-width: 500px) {
+  .button {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
 }
