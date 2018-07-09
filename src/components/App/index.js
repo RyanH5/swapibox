@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  NavLink,
-  Link
-} from 'react-router-dom';
 import Landing from '../Landing/index';
-import Navigation from '../../statelessComponents/Navigation/index';
+import Navigation from '../Navigation/index';
 import { getData, getCategory } from '../../helpers/selectCategory/index';
 import MainContainer from '../MainContainer/index';
 
@@ -18,9 +12,8 @@ class App extends Component {
       planets: [],
       vehicles: [],
       favorites: [],
-      loading: false,
       currentCategory: 'films',
-      errorStatus: '',
+      errorStatus: ''
     };
   }
 
@@ -52,8 +45,14 @@ class App extends Component {
       });
       this.setState({
         favorites: [...favorites, ...newFav]
-      });      
+      });   
     }
+  }
+
+  displayFavorites = () => {
+    this.setState({
+      currentCategory: 'favorites'
+    });
   }
 
 
@@ -63,6 +62,8 @@ class App extends Component {
       <div>
         <Navigation 
           updateCards={this.updateCards}
+          displayFavorites={this.displayFavorites}
+          favorites={favorites}
         />
         {currentCategory === 'films' &&
         <Landing 

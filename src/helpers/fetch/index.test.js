@@ -5,6 +5,7 @@ import { fetchStarWarsData } from './index';
 describe('fetchStarWarsData', () => {
   let mockInfo;
   let mockUrl;
+  let mockResponse;
 
   beforeEach(() => {
     mockInfo = {
@@ -40,10 +41,17 @@ describe('fetchStarWarsData', () => {
 
   it('should return star wars info upon fetch success', async () => {
     const actual = await fetchStarWarsData(mockUrl);
-    expect(actual).toEqual(mockInfo);
+    await expect(actual).toEqual(mockInfo);
   });
 
-  it('should update state with errorStatus if fetch fails', () => {
-
+  it('should update state with errorStatus if fetch fails', async () => {
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.reject(Error('Error occured'));
+    });
+    
+    const expected = new Error('Error occured');    
+    const actual = fetchStarWarsData(mockUrl);
+    
+    await expect(actual).rejects.toEqual(expected);
   });
 });

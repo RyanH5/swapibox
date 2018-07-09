@@ -7,7 +7,6 @@ export const cleanFilmCrawlData = async (url) => {
   return {title: filmCrawl.title, year, crawl: filmCrawl.opening_crawl};
 };
 
-// PEOPLE CLEANERS
 export const cleanPeopleData = async (url) => {
   const {results} = await fetchStarWarsData(url);
   const allPeople = results.map(async person => {
@@ -37,7 +36,6 @@ export const cleanSpeciesData = async (url) => {
   return {specieName};
 };
 
-// PLANET CLEANERS
 export const cleanPlanetData = async (url) => {
   const {results} = await fetchStarWarsData(url);
   const allPlanets = results.map(async planet => {
@@ -67,8 +65,6 @@ export const cleanResidentsData = async (url) => {
   const resident = planetResident.name;
   return resident;
 };
-
-// VEHICLE CLEANER
 
 export const cleanVehiclesData = async (url) => {
   const {results} = await fetchStarWarsData(url);

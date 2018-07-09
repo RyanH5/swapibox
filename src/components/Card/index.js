@@ -28,8 +28,8 @@ export const Card = (props) => {
       return (
         <div>
           <span
-            onClick={() => toggleFavorite({id})}
-            className={selected.length ? 'active' : 'inactive'}
+            onClick={() => toggleFavorite({id})}         
+            className={selected.length ? 'fav active' : 'fav inactive'}
           >
             ✰</span>
           <h1>Name: {name}</h1>
@@ -67,6 +67,28 @@ export const Card = (props) => {
           <h3>Climage: {climate}</h3>
           <h4>Population: {population}</h4>
           <h5>Residents: {residents}</h5>
+        </div>
+      );
+
+    case 'favorites':
+      return (
+        <div>
+          <span 
+            onClick={() => toggleFavorite({id})}
+            className={selected.length ? 'active' : 'inactive'}
+          >
+            ✰</span>
+          <h1>{name}</h1>
+          <h2>{terrain}</h2>
+          <h3>{climate}</h3>
+          <h4>{population}</h4>
+          <h5>{residents}</h5>
+          <h2>{model}</h2>
+          <h3>{vehicleClass}</h3>
+          <h5>{passengers}</h5>
+          <h2>{homeworld}</h2>
+          <h3>{species}</h3>
+          <h5>{population}</h5>
         </div>
       );
   }
