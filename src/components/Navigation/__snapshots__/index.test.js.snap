@@ -31,29 +31,38 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <button
-          onClick={[Function]}
+        <h1
+          className="star-wars"
 >
-          People
-</button>,
-        <button
-          onClick={[Function]}
+          STAR WARS
+</h1>,
+        <div
+          className="nav"
 >
-          Planets
-</button>,
-        <button
-          onClick={[Function]}
->
-          Vehicles
-</button>,
-        <button
-          onClick={[Function]}
->
-          Favorites
-          <span>
-                    1
-          </span>
-</button>,
+          <button
+                    onClick={[Function]}
+          >
+                    People
+          </button>
+          <button
+                    onClick={[Function]}
+          >
+                    Planets
+          </button>
+          <button
+                    onClick={[Function]}
+          >
+                    Vehicles
+          </button>
+          <button
+                    onClick={[Function]}
+          >
+                    Favorites
+                    <span>
+                              1
+                    </span>
+          </button>
+</div>,
       ],
     },
     "ref": null,
@@ -63,36 +72,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "People",
-          "onClick": [Function],
+          "children": "STAR WARS",
+          "className": "star-wars",
         },
         "ref": null,
-        "rendered": "People",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Planets",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Planets",
-        "type": "button",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Vehicles",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Vehicles",
-        "type": "button",
+        "rendered": "STAR WARS",
+        "type": "h1",
       },
       Object {
         "instance": null,
@@ -100,29 +85,102 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Favorites",
-            <span>
-              1
-</span>,
+            <button
+              onClick={[Function]}
+>
+              People
+</button>,
+            <button
+              onClick={[Function]}
+>
+              Planets
+</button>,
+            <button
+              onClick={[Function]}
+>
+              Vehicles
+</button>,
+            <button
+              onClick={[Function]}
+>
+              Favorites
+              <span>
+                            1
+              </span>
+</button>,
           ],
-          "onClick": [Function],
+          "className": "nav",
         },
         "ref": null,
         "rendered": Array [
-          "Favorites",
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": 1,
+              "children": "People",
+              "onClick": [Function],
             },
             "ref": null,
-            "rendered": 1,
-            "type": "span",
+            "rendered": "People",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Planets",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Planets",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Vehicles",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Vehicles",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Favorites",
+                <span>
+                  1
+</span>,
+              ],
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Favorites",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 1,
+                },
+                "ref": null,
+                "rendered": 1,
+                "type": "span",
+              },
+            ],
+            "type": "button",
           },
         ],
-        "type": "button",
+        "type": "div",
       },
     ],
     "type": "div",
@@ -134,29 +192,38 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <button
-            onClick={[Function]}
+          <h1
+            className="star-wars"
 >
-            People
-</button>,
-          <button
-            onClick={[Function]}
+            STAR WARS
+</h1>,
+          <div
+            className="nav"
 >
-            Planets
-</button>,
-          <button
-            onClick={[Function]}
->
-            Vehicles
-</button>,
-          <button
-            onClick={[Function]}
->
-            Favorites
-            <span>
-                        1
-            </span>
-</button>,
+            <button
+                        onClick={[Function]}
+            >
+                        People
+            </button>
+            <button
+                        onClick={[Function]}
+            >
+                        Planets
+            </button>
+            <button
+                        onClick={[Function]}
+            >
+                        Vehicles
+            </button>
+            <button
+                        onClick={[Function]}
+            >
+                        Favorites
+                        <span>
+                                    1
+                        </span>
+            </button>
+</div>,
         ],
       },
       "ref": null,
@@ -166,36 +233,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "People",
-            "onClick": [Function],
+            "children": "STAR WARS",
+            "className": "star-wars",
           },
           "ref": null,
-          "rendered": "People",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Planets",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Planets",
-          "type": "button",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Vehicles",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Vehicles",
-          "type": "button",
+          "rendered": "STAR WARS",
+          "type": "h1",
         },
         Object {
           "instance": null,
@@ -203,29 +246,102 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Favorites",
-              <span>
-                1
-</span>,
+              <button
+                onClick={[Function]}
+>
+                People
+</button>,
+              <button
+                onClick={[Function]}
+>
+                Planets
+</button>,
+              <button
+                onClick={[Function]}
+>
+                Vehicles
+</button>,
+              <button
+                onClick={[Function]}
+>
+                Favorites
+                <span>
+                                1
+                </span>
+</button>,
             ],
-            "onClick": [Function],
+            "className": "nav",
           },
           "ref": null,
           "rendered": Array [
-            "Favorites",
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": 1,
+                "children": "People",
+                "onClick": [Function],
               },
               "ref": null,
-              "rendered": 1,
-              "type": "span",
+              "rendered": "People",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Planets",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Planets",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Vehicles",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Vehicles",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Favorites",
+                  <span>
+                    1
+</span>,
+                ],
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Favorites",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 1,
+                  },
+                  "ref": null,
+                  "rendered": 1,
+                  "type": "span",
+                },
+              ],
+              "type": "button",
             },
           ],
-          "type": "button",
+          "type": "div",
         },
       ],
       "type": "div",
