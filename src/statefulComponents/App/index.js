@@ -1,10 +1,4 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  NavLink,
-  Link
-} from 'react-router-dom';
 import Landing from '../Landing/index';
 import Navigation from '../../statelessComponents/Navigation/index';
 import { getData, getCategory } from '../../helpers/selectCategory/index';
