@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card } from '../Card/index';
 import PropTypes from 'prop-types';
+import './styles.css';
 
 export const MainContainer = ({
   categoryData, 
@@ -24,7 +25,10 @@ export const MainContainer = ({
   }
  
   return (
-    <div>
+    <div className={'container'}>
+      {currentCategory === 'favorites' && !favorites.length &&
+        <h1>CHOOSE FAVORITES FIRST,<br></br> YOU MUST!</h1>
+      }
       {displayCards}
     </div>
   );

@@ -55,7 +55,6 @@ class App extends Component {
     });
   }
 
-
   render() {
     const { currentCategory, favorites} = this.state;
     return (
@@ -68,12 +67,13 @@ class App extends Component {
         {currentCategory === 'films' &&
         <Landing 
           currentCategory={currentCategory}/> }
+        {currentCategory !== 'films' &&
         <MainContainer 
           categoryData={this.state[currentCategory]}
           currentCategory={currentCategory}
           toggleFavorite={this.toggleFavorite}
           favorites={favorites}
-        />
+        />}
       </div>
     );
   }
