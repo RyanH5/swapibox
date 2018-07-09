@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getData } from '../../helpers/selectCategory/index';
+import './styles.css';
 
 class Landing extends Component {
   constructor(props) {
@@ -21,10 +22,15 @@ class Landing extends Component {
   render() {
     const { title, year, crawl } = this.state;
     return (
-      <div>
-        <h2>{title}</h2>
-        <p>{crawl}</p>
-        <h4>{year}</h4>
+      <div className={'landing'}>
+        <div className={"fade"}></div>
+        <main>
+          <div className={'crawl'}>
+            <h2>{title}</h2>
+            <p>{crawl}</p>
+            <h4>{year}</h4>
+          </div>
+        </main>
       </div>
     );
   }
