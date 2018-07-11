@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should match the snapshot 1`] = `
+exports[`App toggleFavorites should render 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -114,7 +114,6 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
-    "disableLifeCycleMethods": true,
   },
 }
 `;

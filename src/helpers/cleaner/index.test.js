@@ -1,6 +1,3 @@
-import { cleanFilmCrawlData } from './index';
-import { mockFilmData } from '../../mockData/mockFilmData';
-import { fetchStarWarsData } from '../fetch/index';
 
 describe('cleanFilmCrawlData', () => {
   let mockUrl = "https://swapi.co/api/films";

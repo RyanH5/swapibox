@@ -20,7 +20,7 @@ export const getData = async (url) => {
         return cleanPeopleData(url);        
       }
     
-    case 'planets':
+    case 'planets': 
       splitUrl = url.split("/");
       if (splitUrl[5]) {
         return cleanHomeworldData(url);
