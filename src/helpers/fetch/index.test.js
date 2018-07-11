@@ -1,11 +1,8 @@
-import React from 'react';
-import { shallow } from 'enzyme';
 import { fetchStarWarsData } from './index';
 
 describe('fetchStarWarsData', () => {
   let mockInfo;
   let mockUrl;
-  let mockResponse;
 
   beforeEach(() => {
     mockInfo = {
